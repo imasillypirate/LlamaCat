@@ -1,7 +1,7 @@
 # LlamaCat
 LlamaCat is a silly piece of code complete with GUI for creating gibberish in the style of a specific piece of work using a Markov Chain. 
 
-The code requires python 2.7, numpy, Tkinter, random, and pickle.
+The code requires python 2.7, numpy, Tkinter, random, and pickle. You will also need the provided image 'LlamaCat.gif' in the local directory.
 
 The user will be prompted to either load or read a library. Loading requires a pickle file (.pkl) formatted and created from a previous run of the code. 
 The other option is to read in a text file. Because text files of literature often have junk at the beginning worth ignoring for our purposes (like tables of contents, copyright/licensing information, and/or forwards written in a different style from the rest of the work) an integer can be entered into the field to the left of the 'Read' button and the first that many lines of the text file will be ignored. When 'Read' is clicked the user will be prompted to select a text file (.txt). The code will then read through the text generating a list of unique words. “Word” here is used loosely. Commas, periods, question marks, exclamation points, dashes, semi-colons, and quotation marks will all be counted as their own words and any word containing them (usually the dash) will be split into multiple words. The list of unique words will also be case sensitive, so if a word appears in the text as both capitalized and non-capitalized, then both will be treated as different words. Once the list of words has been created, a matrix of probabilities will be created which is NxN in size (if there are N entries in the words list). Each entry is a probability that the word associated with that column will follow the word associated with the row.
