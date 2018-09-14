@@ -2,7 +2,6 @@ import io
 import random 
 import numpy as np
 import pickle
-import time
 from tkinter import *
 import tkMessageBox, tkFileDialog
 
